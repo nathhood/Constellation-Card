@@ -16,5 +16,12 @@ namespace Constellation_Card
         {
             InitializeComponent();
         }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            BackColor = Color.Black;
+
+
+        }
     }
 }
