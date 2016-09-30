@@ -46,7 +46,7 @@ namespace Constellation_Card
             Pen yellowPen = new Pen(Color.Yellow, 3); //create the different colours for lines
             SoundPlayer ding = new SoundPlayer(Properties.Resources.ding); //to desgnate the sound file to the name ding
             SoundPlayer tada = new SoundPlayer(Properties.Resources.tada); //to designate a different sound file to the name tada
-
+            SoundPlayer organTada = new SoundPlayer(Properties.Resources.organTada); //to desgnate the sound file to the name organTada
             //write the words as soon as the screen is clicked
             formGraphics.DrawString("Triangulum Greeting Card", bigFont, whiteBrush, 50, 40);
             formGraphics.DrawString("Nathan Hood", mediumFont, whiteBrush, 50, 550);
@@ -56,7 +56,7 @@ namespace Constellation_Card
             //clear the screen to a black screen
             formGraphics.Clear(Color.Black);
 
-            //draw the smaller stars
+            //draw the smaller stars and pause the program for 200 millisecond between
             formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
             Thread.Sleep(200);
             formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
@@ -130,6 +130,11 @@ namespace Constellation_Card
             Thread.Sleep(500);
             formGraphics.DrawLine(whitePen, 565, 190, 239, 261);
             Thread.Sleep(500);
+            organTada.Play();
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            Thread.Sleep(3000);
 
             //loop to flash the lines between four different colours
             for (int i = 0; i < number5; i++)
@@ -186,13 +191,472 @@ namespace Constellation_Card
             formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
             formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
             formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+            
+            //sound to signify the constellation is finished and the words are scrolling up
+            tada.Play();
 
             //create the description for the star using a different font then the tittle
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 650);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 680);
+
+            Thread.Sleep(50); //pause the program to make it look like scrolling
+
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 640);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 670);
+
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50);
+
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 630);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 660);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50);
+
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 620);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 650);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50); //pause the program
+          
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 610);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 640);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50); //pause the program
+            
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 600);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 630);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50); //pause the program
+            
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 590);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 620);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50); //pause the program
+            
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 580);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 610);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50); //pause the program
+           
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 570);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 600);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50); //pause the program
+
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
+            formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 560);
+            formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 590);
+
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+            Thread.Sleep(50); //pause the program
+
+            formGraphics.Clear(Color.Black); //clear the screen to a black screen
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 550);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 580);
 
-            //sound to signify the program being finished
-            tada.Play();
+            //draw the smaller stars
+            formGraphics.FillEllipse(whiteBrush, 300, 38, 5, 5);
+
+            formGraphics.FillEllipse(whiteBrush, 500, 58, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 600, 98, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 100, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 850, 452, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 684, 241, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 125, 65, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 486, 602, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 458, 99, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 25, 35, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 578, 64, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 687, 153, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 789, 265, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 348, 648, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 435, 561, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 682, 305, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 598, 530, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 703, 631, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 165, 498, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 231, 496, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 34, 634, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 135, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 206, 364, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 394, 460, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 496, 469, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 500, 264, 5, 5);
+            formGraphics.FillEllipse(whiteBrush, 437, 167, 5, 5);
+
+            //draw the constellation stars
+            formGraphics.FillEllipse(yellowBrush, 238, 205, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 560, 185, 10, 10);
+            formGraphics.FillEllipse(yellowBrush, 234, 256, 10, 10);
+
+            //turn the lines to yellow
+            formGraphics.DrawLine(yellowPen, 239, 261, 243, 210);
+            formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
+            formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
+
+
+
+
 
 
         }
