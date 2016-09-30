@@ -251,6 +251,7 @@ namespace Constellation_Card
 
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
 
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 630);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 660);
 
@@ -296,6 +297,8 @@ namespace Constellation_Card
             Thread.Sleep(50);
 
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 620);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 650);
 
@@ -341,6 +344,8 @@ namespace Constellation_Card
             Thread.Sleep(50); //pause the program
           
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 610);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 640);
 
@@ -386,6 +391,8 @@ namespace Constellation_Card
             Thread.Sleep(50); //pause the program
             
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 600);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 630);
 
@@ -431,6 +438,8 @@ namespace Constellation_Card
             Thread.Sleep(50); //pause the program
             
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 590);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 620);
 
@@ -476,6 +485,8 @@ namespace Constellation_Card
             Thread.Sleep(50); //pause the program
             
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 580);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 610);
 
@@ -521,6 +532,8 @@ namespace Constellation_Card
             Thread.Sleep(50); //pause the program
            
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 570);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 600);
 
@@ -566,6 +579,8 @@ namespace Constellation_Card
             Thread.Sleep(50); //pause the program
 
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 560);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 590);
 
@@ -611,6 +626,8 @@ namespace Constellation_Card
             Thread.Sleep(50); //pause the program
 
             formGraphics.Clear(Color.Black); //clear the screen to a black screen
+
+            //create the scrolling description for the star using a different font then the tittle
             formGraphics.DrawString("Triangulum is a small constellation in the northern sky.", smallFont, whiteBrush, 60, 550);
             formGraphics.DrawString("Triangulum was one of the 48 constellations listed by the 2nd century astronomer Ptolemy.", smallFont, whiteBrush, 60, 580);
 
