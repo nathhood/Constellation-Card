@@ -671,11 +671,6 @@ namespace Constellation_Card
             formGraphics.DrawLine(yellowPen, 243, 210, 565, 190);
             formGraphics.DrawLine(yellowPen, 565, 190, 239, 261);
 
-
-
-
-
-
         }
     }
 }
